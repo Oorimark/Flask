@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{display:flex;height:80vh;justify-content:center;align-items:center;width:100%;}
+    main{display:flex;flex-direction:column;justify-content: center;align-items:center;}
+    .back{padding: 15px;border-radius:50px;border:1px solid rgba(0, 0, 0, 0.57);
+          color:rgba(0, 0, 0, 0.57);width:100px;text-align: center;cursor:pointer;}
+</style>
+<body>
+    <main>
+
+        <!-- {% for element in message %}
+
+        {% endfor %} -->
+
+        {% if message[0] == "error" %}
+        <div class="emoji">
+            <!-- angry emoji -->
+            <img src="../public/img/Emoji.png" alt="">
+            <!-- smiling emoji -->
+            <img src="" alt="">
+        </div>
+        <div class="errHeader">
+            <h1>{{ message[1] }}<span></span></h1>
+        </div>
+        <div class="errInfo">
+            <p>This error was created because...</p>
+        </div>
+        <div class="back">
+            Back
+        </div>
+        {% endif %}
+
+        
+        
+    </main>
+</body>
+<script>
+    document.querySelector(".back").onclick = () => { window.History.back() }
+</script>
+</html>

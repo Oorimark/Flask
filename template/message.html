@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>{{message[0]}}</title>
+</head>
+<style>
+    body{display:flex;height:80vh;justify-content:center;align-items:center;width: 100%;
+         background: #F2F2F2;}
+    .logo{position: absolute;top: 10px; left: 10px;display: flex;align-items: center;
+          justify-content: center;column-gap: 3px;}
+    .logo img{width: 30px;}
+    .logo p{color: #FE724E;}
+    .bi{font-size: 40px;}
+    .msg{max-width: 500px;}
+    .msg h2,p{text-align: center;}
+    main{display:flex;flex-direction:column;justify-content: center;align-items:center;}
+    .back{padding: 10px;border-radius:50px;border:1px solid rgba(0, 0, 0, 0.57);
+          color:rgba(0, 0, 0, 0.57);width:100px;text-align: center;cursor:pointer;
+          display: flex;align-items: center; justify-content: center;}
+</style>
+<body>
+    <div class="logo">
+        <img src="../public/img/OBJECT.png" alt="">
+        <p>Tasteclan</p>
+    </div>
+    <main>
+
+        <!-- {% for element in message %}
+
+        {% endfor %} -->
+
+        {% if message[0] == "error" %}
+        <div class="emoji">
+            <!-- angry emoji -->
+            <i class="bi bi-emoji-frown"></i>
+            <!-- smiling emoji -->
+            <img src="" alt="">
+        </div>
+        <div class="msg">
+            <div class="errHeader">
+                <h2>{{ message[1] }}<span></span></h2>
+            </div>
+            <div class="errInfo">
+                <p>{{ " " if message[2] == "" else message[2]}}</p>
+            </div>
+        </div>
+        <div class="back" onclick="Back()">
+            <i class="bi bi-arrow-left-short"></i> Back
+        </div>
+        {% else %}
+        <div class="emoji">
+            <!-- angry emoji -->
+            <i class="bi bi-emoji-smile"></i>
+            <!-- smiling emoji -->
+            <img src="" alt="">
+        </div>
+        <div class="msg">
+            <div class="errHeader">
+                <h2>{{ message[1] }}<span></span></h2>
+            </div>
+        </div>
+        <!-- <div class="errInfo">
+            <p>This error was created because...</p>
+        </div> -->
+        <div class="back" onclick="Back()">
+            <i class="bi bi-arrow-left-short"></i> Back
+        </div>
+        {% endif %}
+
+        
+        
+    </main>
+</body>
+<script>
+    function Back(){
+        window.history.back();
+    }
+</script>
+</html>
