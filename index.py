@@ -16,7 +16,7 @@ app = Flask(__name__, template_folder='template')
 @app.route("/")
 def Home():
     status = "error"
-    msg = "Server is currently down at the moment, please try again!"
+    msg = "Server is currently down at the moment, We are during our best to resolve it."
     det = "This is caused either because the server is down or a bad request is made"
     message = [status,msg,det]
     return render_template('index.html', message = message)
