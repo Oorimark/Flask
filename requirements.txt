@@ -43,7 +43,6 @@ MarkupSafe==2.0.1
 matplotlib==3.5.1
 mccabe==0.6.1
 mysql-connector==2.2.9
-mysql.connector==2.2.9
 mysql-connector-python==8.0.27
 numpy==1.21.3
 packaging==21.3
