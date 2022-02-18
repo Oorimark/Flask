@@ -13,7 +13,7 @@ app = Flask(__name__, template_folder='template')
 # initializatons...  
 
    
-@app.route("/")
+@app.route("/", methods=["GET","POST"])
 def Home():
     status = "error"
     msg = "Server is currently down at the moment, We are during our best to resolve it."
