@@ -22,7 +22,7 @@ def Home():
     return render_template('index.html', message = message)
 
 # importing route
-# from api.routes.index import *
+from api.routes.index import *
 
  
  
