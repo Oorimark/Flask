@@ -3,8 +3,6 @@ from flask import Flask
 app = Flask(__name__)
 #configuration of the mail
 
-
-
 app.config['DEBUG'] = False
 app.config['TESTING'] = False
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
