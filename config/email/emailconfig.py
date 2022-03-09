@@ -4,7 +4,7 @@ app = Flask(__name__)
 #configuration of the mail
 
 app.config['DEBUG'] = False
-app.config['TESTING'] = True
+app.config['TESTING'] = False
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_TLS'] = False
