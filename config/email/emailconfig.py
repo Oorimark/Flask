@@ -4,13 +4,13 @@ app = Flask(__name__)
 #configuration of the mail
 
 app.config['DEBUG'] = False
-app.config['TESTING'] = False
+app.config['TESTING'] = True
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USERNAME'] = 'publicmailbox13@gmail.com'
 app.config['MAIL_PASSWORD'] = 'markoori'
-app.config['MAIL_MAX_EMAILS'] = None
+# app.config['MAIL_MAX_EMAILS'] = None
 app.config['MAIL_DEFAULT_SENDER'] = ('Tasteclan','publicmailbox13@gmail.com')
 app.config['MAIL_ASCII_ATTACHMENTS'] = False
