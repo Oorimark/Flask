@@ -18,11 +18,11 @@ load_dotenv()
 
 #connecting to the mysql database
 db = mysql.connector.connect(
-    host= "mysql-70675-0.cloudclusters.net",
-    port = 19958,
+    host= "mysql-71846-0.cloudclusters.net",
+    port = 19414,
     user= "admin",
-    passwd = "wNUOlphY",
-    database = "tasteclan"
+    passwd = "LwqrO6YF",
+    database = "Tasteclandb"
 )
 
 my_cursor = db.cursor()
