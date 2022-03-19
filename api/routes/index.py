@@ -2,6 +2,7 @@ from unicodedata import name
 from flask import Flask, request
 import sys
 import os
+import requests
 from pathlib import Path
 
 from flask.templating import render_template
@@ -108,7 +109,8 @@ def SignUp():
                     global token_arr
                     token_arr.append(token)
                     # sending token to the user
-                    sendToken(token,email)
+                    #sendToken(token,email)
+                    res = requests.get(f"https://tasteclan.pythonanywhere.com/{token}/{email}")
                     status = "success"
                     personProfile(token,fullname,password,email)
                     temp_msg  = "A Link has been sent with your email, click the link to validate your Email"
