@@ -23,7 +23,7 @@ sys.path.append(str(package_root_directory))
 
 
 
-from config._mysql.db_config import mysql_db
+# from config._mysql.db_config import mysql_db
 from config._mongodb.db_config import mongodb
 from services.genToken import token_encode,generate_token
 from services.hashpasswd import HashLetter
@@ -152,7 +152,7 @@ def ValidEmail(token):
         status = 'success'
         # send info to the db
         print(personInfo)
-        mysql_db.Register_db(personInfo[token][0], personInfo[token][2], personInfo[token][1]) # mysql db
+       # mysql_db.Register_db(personInfo[token][0], personInfo[token][2], personInfo[token][1]) # mysql db
         mongodb.Register_db(personInfo[token][0],personInfo[token][2], personInfo[token][1]) # mongodb db
         render_msg = "You\'ve successfully SignUp. You\'re Now a clan"
         return render_template('message.html',message= [status, render_msg])
